@@ -85,8 +85,8 @@
         <h1 class="form__heading">Do you wanna go?</h1>
         <p class="form__text">Aliquam sed posuere urna, et gravida nisl. Praesent<br>interdum nisl libero, pretium egestas purus eleifend vitae. Mauris suscipit vel lectus at luctus.</p>
         <form class="form__main">
-          <input type="text" placeholder="Your name:">
-          <input type="text" placeholder="Your phone:">
+          <input type="text" placeholder="Your name:" required>
+          <input type="tel" placeholder="Your phone:" required>
           <button type="submit" class="form__button">Order now</button>
           <div class="form__date-text"><i class="form__icon"></i> * Your data will not be transferred</div>
         </form>
@@ -137,16 +137,21 @@
         </div>
       </div>
     </section>
+    <section class="travel">
+      <div class="travel__wrapper">
+        <div class="travel__heading">Travel with us</div>
+        <div class="travel__tiles-wrapper">
+          <div class="travel__tile"></div>
+        </div>
+      </div>
+    </section>
     <section class="gallery">
       <div class="gallery__wrapper">
         <div class="gallery__title">Gallery</div>
         <div class="gallery__photo-wrap">
-          <div class="image-wrap"><img src="/img/gallery-photo1.jpg" alt=""></div>
-          <div class="image-wrap"><img src="/img/gallery-photo2.jpg" alt=""></div>
-          <div class="image-wrap"><img src="/img/gallery-photo3.jpg" alt=""></div>
-          <div class="image-wrap"><img src="/img/gallery-photo4.jpg" alt=""></div>
-          <div class="image-wrap"><img src="/img/gallery-photo5.jpg" alt=""></div>
-          <div class="image-wrap"><img src="/img/gallery-photo6.jpg" alt=""></div>
+          <div class="gallery__block-1"><img src="/img/gallery-photo1.jpg" alt=""><img src="/img/gallery-photo4.jpg" alt=""></div>
+          <div class="gallery__block-2"><img src="/img/gallery-photo2.jpg" alt=""><img src="/img/gallery-photo5.jpg" alt=""></div>
+          <div class="gallery__block-3"><img src="/img/gallery-photo3.jpg" alt=""><img src="/img/gallery-photo6.jpg" alt=""></div>
         </div>
       </div>
     </section>
@@ -172,6 +177,48 @@
         </div>
       </div>
     </section>
+    <section class="clients">
+      <div class="clients__wrapper">
+        <div class="clients__heading">Our clients say</div>
+        <div class="clients__left"> 
+          <div class="clients__icon"></div>
+          <div class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </div>
+          <div class="clients__tile-wrapper">
+            <div class="clients__photo"></div>
+            <div class="clients__name">Pavliv Yaroslav Web designer</div>
+          </div>
+        </div>
+        <div class="clients__right">
+          <div class="clients__icon"></div>
+          <div class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </div>
+          <div class="clients__tile-wrapper">
+            <div class="clients__photo--1"></div>
+            <div class="clients__name">John Scott The Fringe</div>
+          </div>
+        </div>
+        <div class="clients__form-wrapper">
+          <div class="clients__form-double"></div>
+          <div class="clients__form-heading">CONTACTS</div>
+          <div class="clients__form-text">Sign up for our newsletter to receive updates</div>
+          <form class="clients__form">
+            <input placeholder="Name" type="text" required class="clients__naming">
+            <input placeholder="Phone" type="tel" required class="clients__phone">
+            <input placeholder="Email" type="email" required class="clients__mail">
+            <button class="clients__submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__copyright">All rights reserved 2015</div>
+        <div class="footer__social"><a href="#" class="footer__icon-wrapper">
+            <div class="footer__icon"></div></a><a href="#" class="footer__icon-wrapper--facebook">
+            <div class="footer__icon--facebook"></div></a><a href="#" class="footer__icon-wrapper--vk">
+            <div class="footer__icon--vk"></div></a></div>
+        <div class="footer__phone">1 234 243 123</div>
+      </div>
+    </footer>
     <script src="lib/jquery/jquery-1.11.3.min.js"></script>
     <script src="lib/modernizr/modernizr.js"></script>
     <script src="js/common.js"></script>

@@ -41,7 +41,7 @@ grunt.initConfig({
 			}
 		},
 		jade: {
-			files: ['src/*.jade'],
+			files: ['src/**/*.jade'],
 			tasks: ['jade'],
 			options: {
 				spawn: false,
