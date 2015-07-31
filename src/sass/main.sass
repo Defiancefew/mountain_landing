@@ -1,0 +1,593 @@
+%wrapper
+	max-width: 1170px
+	margin: 0 auto
+	padding: 0 15px
+
+#header__dropdown-menu
+	fill: $blue
+	margin-top: 25px
+	display: none
+.header
+	background-image: url(../img/header-bg.jpg)
+	background-position: top center
+	min-height: 700px
+	width: 100%
+	&__top-overlay
+		width: 100%
+		background-color: rgba(255,255,255,0.4)
+		min-height: 90px
+		position: relative
+		vertical-align: middle
+	&__wrapper
+		@extend %wrapper
+	&__logo
+		float: left
+		margin-right: 60px
+		margin-top: 12px
+		+vc
+	&__nav
+		float: left
+	li
+		display: inline-block
+		margin-right: 25px
+		&:last-child
+			margin-right: 0
+	ul
+		a
+			display: block
+			text-decoration: none
+			color: $grey
+			font-family: "OpenSans-Bold"
+			font-size: 12px
+			line-height: 40px
+			text-transform: uppercase
+			border-bottom: 2px solid transparent
+			+vc
+			&:hover
+				border-bottom: 2px solid $blue
+	&__call
+		float: right
+		+vc
+	&__call-us
+		width: 153px
+		height: 46px
+		border: 4px solid $blue
+		border-radius: 4px
+		background: transparent
+		color: $blue
+		font-family: "Raleway-Bold"
+		font-size: 12px
+		line-height: 12px
+		text-transform: uppercase
+	&__jumbotron
+		position: absolute
+		top: 300px
+		padding-left: 60px
+	&__jumbotron-text
+		margin: 30px 0 30px 0
+		color: $grey
+		font-family: "OpenSans-Regular"
+		font-size: 18px
+		line-height: 29px
+	&__jumbotron-button
+		display: inline-block
+		width: 253px
+		height: 60px
+		background-color: $blue
+		border-radius: 4px
+		box-shadow: 0 0 35px rgba(3, 3, 3, 0.06)
+		color: white
+		font-family: "Raleway-Bold"
+		font-size: 14px
+		line-height: 60px
+		text-transform: uppercase
+		text-decoration: none
+		text-align: center
+
+.about
+	background-color: #f6f4f4
+	position: relative
+	&__wrapper
+		@extend %wrapper
+		min-height: 670px
+		background-color: #f6f4f4
+		background-image: url(../img/about-bg.png)
+		background-repeat: no-repeat
+		background-position: 144px 65px
+		position: relative
+		+cf
+	&__content
+		position: absolute
+		top: 250px
+	&__photo-wrapper
+		display: inline-block
+		float: right
+		width: 80%
+		position: relative
+	&__photo1
+		transition: 0.5s
+		position: absolute
+		top: -30px
+		right: -200px
+		z-index: 0
+		overflow-x: hidden
+		&:hover
+			filter: saturate(0.6) contrast(1.2) brightness(1) 
+	&__heading
+		color: black
+		font-family: "OpenSans-Bold"
+		font-size: 20px
+		text-transform: uppercase
+		line-height: 20px
+	&__text
+		color: $grey
+		font-family: "OpenSans-Regular"
+		font-size: 14px
+		margin: 30px 0 30px 0
+	&__button
+		width: 130px
+		height: 40px
+		background-color: $blue
+		border-radius: 4px
+		color: white
+		font-family: "OpenSans-Bold"
+		font-size: 12px
+		text-transform: uppercase
+
+.journal
+	&__wrapper
+		@extend %wrapper
+	&__heading
+		color: black
+		font-family: "OpenSans-Bold"
+		font-size: 30px
+		text-transform: uppercase
+		text-align: center
+		margin: 70px 0
+	&__tile-wrapper
+		box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.71)
+		margin: 80px auto
+		+cf
+		background-color: white
+	&__tile-img
+		background-image: url(../img/tile-mountain.jpg)
+		background-size: cover
+		width: 380px
+		height: 380px
+		float: left
+		display: flex
+		justify-content: center
+		align-items: center
+		position: relative
+		transition: 0.5s
+		&:hover
+			filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg)
+		&:before
+			content: ""
+			+arr(15,25, white, l)
+			position: absolute
+			right: 0
+			top: 50px
+	&__tile-icon
+		display: inline-block
+		+s($icon-heart)
+	&__tile-info
+		width: 380px
+		height: 380px
+		float: left
+		text-align: center
+		padding: 50px 28px 0 28px
+	&__tile-sub 
+		color: $blue
+		font-family: "OpenSans-Bold"
+		font-size: 11px
+		text-transform: uppercase
+	&__tile-heading
+		color: #212121
+		font-family: "OpenSans-Bold"
+		font-size: 16px
+		text-transform: uppercase
+		margin-top: 55px
+	&__tile-text
+		color: $grey
+		font-family: "OpenSans-Regular"
+		font-size: 14px
+		margin: 30px 0 40px 0
+	&__tile-pagination
+		color: #212121
+		font-family: "Times New Roman"
+		font-size: 14px
+		font-style: italic
+	&__tile-icon--1
+		display: inline-block
+		+s($icon-water)
+	&__tile-img--1
+		@extend .journal__tile-img
+		background-image: url(../img/tile-lake.jpg)
+		&:before
+			content: ""
+			+arr(25,15, white, t)
+			position: absolute
+			top: 366px
+			left: 50px
+	&__tile-icon--2
+		display: inline-block
+		+s($icon-tree)
+	&__tile-img--2
+		@extend .journal__tile-img
+		background-image: url(../img/tile-forest.jpg)
+		&:before
+			content: ""
+			+arr(15,25, white, r)
+			position: absolute
+			top: 50px
+			left: 0
+	
+.form
+	min-height: 800px
+	background-image: url(../img/form-bg.jpg)
+	background-position: center
+	padding-top: 250px
+	background-repeat: no-repeat
+	&__wrapper
+		@extend %wrapper
+	&__heading
+		color: #2C2E37
+		font-family: "OpenSans-Bold"
+		font-size: 20px
+		text-transform: uppercase
+	&__text
+		color: $grey
+		font-family: "OpenSans-Regular"
+		font-size: 16px
+		margin: 25px 0 30px 0
+	&__icon
+		+s($-lock-locked)
+		display: inline-block
+		vertical-align: baseline
+	&__date-text
+		color: $blue
+		font-family: "OpenSans-Regular"
+		font-size: 14px
+	&__button
+		@extend .header__jumbotron-button
+		line-height: 45px
+		width: 190px
+		height: 45px
+	input
+		width: 250px
+		height: 50px
+		padding-left: 10px
+		margin-bottom: 10px
+		font-size: 14px
+
+.work
+	min-height: 720px
+	&__wrapper
+		@extend %wrapper
+		text-align: center
+		padding-top: 115px
+	&__title
+		color: #2C2E37
+		font-family: "OpenSans-Bold"
+		font-size: 30px
+		text-transform: uppercase
+	&__tile
+		width: 22.5%
+		margin: 0 1%
+		display: inline-block
+	&__pin
+		width: 50px
+		height: 50px
+		color: $blue
+		border-radius: 50%
+		background-color: rgba(255,255,255,0)
+		border: 3px solid $blue
+		line-height: 45px
+		font-family: "Roboto-Black"
+		font-size: 16px
+		text-align: center
+		margin: 60px auto 0 auto
+	&__badge-wrap
+		width: 179px
+		height: 179px
+		background-color: #F0F3F6
+		border-radius: 50%
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: 60px auto 30px auto
+	&__badge
+		width: 130px
+		height: 130px
+		+s($icon-pseudo)
+		display: flex
+		justify-content: center
+		align-items: center
+	&__icon
+		+s($icon-file)
+	&__heading
+		color: #2C2E37
+		font-family: "Roboto-Black"
+		font-size: 18px
+	&__text
+		color: #949494
+		font-family: "Roboto-Light"
+		font-size: 16px
+	&__icon--2
+		@extend .work__icon
+		+s($icon-profile)	
+	&__icon--3
+		@extend .work__icon
+		+s($icon-book)
+	&__icon--4
+		@extend .work__icon
+		+s($icon-checklist)
+
+.gallery
+	&__wrapper
+		@extend %wrapper
+		text-align: center
+		margin-bottom: 80px
+	&__title
+		color: #2C2E37
+		font-family: "OpenSans-Bold"
+		font-size: 30px
+		text-transform: uppercase
+		margin-bottom: 75px
+	&__photo-wrap
+		+cf
+	&__block-1
+		float: left
+	&__block-2
+		float: left
+	&__block-3
+		float: left
+	img
+		display: block
+		padding: 9px
+		transition: 0.5s
+		&:hover
+			filter: sepia(0.4) saturate(1.5) contrast(0.9) brightness(1.1) hue-rotate(-15deg)
+
+.partners
+	background-color: #f8f9fa
+	&__wrapper
+		@extend %wrapper
+		min-height: 180px
+		position: relative
+		+cf
+	&__item
+		width: 16.66666%
+		float: left
+		padding: 120px 50px
+	&__icon
+		&--slack
+			+s($icon-slack)
+			transition: 0.5s
+			&:hover
+				filter: brightness(5%)
+		&--adobe
+			+s($icon-adobe)
+			transition: 0.5s
+			&:hover
+				filter: brightness(5%)
+		&--google
+			+s($icon-google)
+			transition: 0.5s
+			&:hover
+				filter: brightness(5%)
+		&--facebook
+			+s($icon-facebook)
+			transition: 0.5s
+			&:hover
+				filter: brightness(5%)
+		&--spotify
+			+s($icon-spotify)
+			transition: 0.5s
+			&:hover
+				filter: brightness(5%)
+		&--nike
+			+s($icon-nike)
+			transition: 0.5s
+			&:hover
+				filter: brightness(5%)
+
+.clients
+	min-height: 1280px
+	background-image: url(../img/clients-bg.jpg)
+	background-position: bottom center
+	background-repeat: no-repeat
+	&__wrapper
+		@extend %wrapper
+		+cf
+		position: relative
+	&__heading
+		@extend .gallery__title
+		text-align: center
+		margin-top: 115px
+	&__left
+		max-width: 520px
+		float: left
+		position: relative
+	&__text
+		color: #BCBCBC
+		font-family: "OpenSans-Regular"
+		font-size: 18px
+		margin-bottom: 30px
+		padding-top: 45px
+	&__right
+		max-width: 520px
+		position: relative
+		float: right
+	&__tile-wrapper
+		display: flex
+		align-items: center
+	&__photo
+		+s($icon-people1)
+		margin-right: 20px
+	&__photo--1
+		+s($icon-people2)
+		margin-right: 20px
+	&__name
+		color: $blue
+		font-family: "OpenSans-Regular"
+		font-size: 16px
+		font-weight: 300
+	&__icon
+		+s($icon-apostrofe)
+		position: absolute
+		top: 10px
+	&__form-wrapper
+		margin: 400px auto 0 auto
+		max-width: 500px
+		padding: 45px 30px
+		background-image: url(../img/form-bg.png)
+		border-radius: 8px
+		box-shadow: 0 5px 51px rgba(0, 0, 0, 0.75)
+	&__form-heading
+		text-align: center
+		font-family: "OpenSans-Bold"
+		color: $blue
+		font-size: 36px
+	&__form-text
+		font-family: "OpenSans-Regular"
+		text-align: center
+		color: #383E4A
+		font-size: 16px
+		margin-bottom: 40px
+	input
+		display: block
+		width: 100%
+		height: 50px
+		padding-left: 10px
+		margin-bottom: 10px
+		font-size: 14px
+		border-radius: 4px
+	&__submit
+		@extend .header__jumbotron-button
+		width: 100%
+
+.footer
+	background-image: url(../img/footer-bg.jpg)
+	&__wrapper
+		@extend %wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+		min-height: 80px
+	&__copyright
+		color: #6a95a3
+		font-family: "OpenSans-Regular"
+		font-size: 18px
+	&__phone
+		color: #6a95a3
+		font-family: "Roboto-Black"
+		font-size: 27px
+	&__social
+		display: flex
+		width: 128px
+		justify-content: space-between
+	&__icon-wrapper
+		width: 39px
+		height: 39px
+		background-color: #29C5F6
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-basis: 39px
+		&--facebook
+			@extend .footer__icon-wrapper
+			background-color: #6788ce
+		&--vk
+			@extend .footer__icon-wrapper
+			background-color: #54769a
+	&__icon
+		+s($icon-twitter)
+		&--vk
+			+s($icon-vk)
+		&--facebook
+			+s($icon-social-facebook)
+
+%tile__style
+	max-width: 200px
+	min-height: 382px
+	background-repeat: no-repeat
+	padding: 0 22px
+	color: #FFF
+	font-family: "OpenSans-Regular"
+	+cf
+	float: left
+	margin-right: 35px
+	transition: 0.5s
+	&:hover
+		filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg)
+
+.travel
+	background-image: url(../img/travel-bg.jpg)
+	min-height: 1030px
+	background-repeat: no-repeat
+	&__wrapper
+		@extend %wrapper
+	&__heading
+		text-align: center
+		color: #2C2E37
+		font-family: "OpenSans-Bold"
+		font-size: 30px
+		text-transform: uppercase
+		line-height: 30px
+		margin-bottom: 100px
+	&__tiles-wrapper
+		width: 100%
+		min-height: 382px
+		+cf
+	&__tile
+		@extend %tile__style
+		background-image: url(../img/tile-carpathian.jpg)
+		&--alps
+			@extend %tile__style
+			background-image: url(../img/tile-alps.jpg)
+		&--pyrenees
+			@extend %tile__style
+			background-image: url(../img/tile-pyrenees.jpg)
+		&--rocky
+			@extend %tile__style
+			background-image: url(../img/tile-rocky.jpg)
+		&--kavkaz
+			@extend %tile__style
+			background-image: url(../img/tile-kavkaz.jpg)
+			margin-right: 0
+	&__stars
+		+s($icon-four-stars)
+		margin-bottom: 130px
+		&--five
+			+s($icon-five-stars)
+			margin-bottom: 130px
+		&--three
+			+s($icon-three-stars)
+			margin-bottom: 130px
+	&__title
+		font-size: 28px
+		color: #FFF
+		font-family: "OpenSans-Regular"
+		line-height: 28px
+	&__text
+		margin: 	30px 0 28px 0
+		font-size: 16px
+		color: #FFF
+		font-family: "OpenSans-Regular"
+	&__price-left
+		font-size: 18px
+		color: #FFF
+		font-family: "OpenSans-Regular"
+		text-decoration: line-through
+		float: left
+		height: 60px
+		line-height: 60px
+	&__price-right
+		font-family: "OpenSans-Bold"
+		font-size: 26px
+		float: right
+		height: 60px
+		line-height: 60px
+

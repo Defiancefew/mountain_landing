@@ -5,11 +5,118 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-
-
+	.header
+		ul.header__list
+			position: absolute
+			background-color: $blue
+			border-radius: 5px
+			li
+				display: block
+				margin-right: 0
+				transform: none
+				padding: 0 40px
+				top: 0
+				&:hover
+					background-color: lighten($blue, 10%)
+				a
+					color: white
+					transform: none
+					line-height: 25px	
+					text-align: center
+					transition: 0.5s
+					border: none
+					&:hover
+						border: none
+		&__jumbotron
+			padding-left: 0
+		&__jumbotron-logo
+			display: block
+			margin: 0 auto
+	.about
+		&__photo1
+		&__photo2
+	.form
+		text-align: center
+		input
+			display: block
+			margin: 15px auto
+		button
+			display: block
+			margin: 15px auto
+			width: 250px
+		&__date-text
+			display: block
+			margin: 0 auto
+			text-align: center
+			margin-top: 20px
+	.work
+		&__tile
+			width: 35%
+		&__wrapper
+			margin-bottom: 100px
+	.gallery
+		&__block-1
+			float: none
+			margin: 0 auto
+			img
+				width: 60%
+				margin: 0 auto
+		&__block-2
+			float: none
+			margin: 0 auto
+			img
+				width: 60%
+				margin: 0 auto
+		&__block-3
+			float: none
+			width: 100%
+			margin: 0 auto
+			img
+				width: 60%
+				display: block
+				margin: 0 auto
+	.journal
+		&__tile-wrapper
+			display: block
+			margin: 80px auto
+			width: 760px
+	.partners
+		&__wrapper
+			padding-left: 18%
+		&__item
+			float: none
+			display: inline-block
+			padding: 41px 0 
+			margin-left: 9%
+	.clients
+		&__wrapper
+			min-height: 1500px
+		&__right
+			float: none
+			display: block
+			margin: 0 auto
+		&__left
+			float: none
+			display: block
+			margin: 0 auto
+		&__form-wrapper
+			max-width: 440px
+			margin: 180px auto 0 auto
+	.header__menu
+		#header__dropdown-menu
+			display: inline-block
+		
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.journal
+		&__tile-wrapper
+			width: 380px
+			margin: 0 auto 40px auto
+	.work
+		&__tile
+			display: block
+			margin: 0 auto
 
 
 

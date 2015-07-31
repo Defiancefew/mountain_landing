@@ -20,14 +20,15 @@
           <div class="header__topline">
             <div class="header__logo"><img src="img/logo.png" class="header__logo-img"></div>
             <nav class="header__nav">
-              <ul>
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Journal</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Journal</a></li>
+              <div class="header__burger"><a href="#" class="header__menu"><svg height="32px" id="header__dropdown-menu" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></a></div>
+              <ul class="header__list">
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#travel">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#contacts">Contact</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#journal">Journal</a></li>
               </ul>
             </nav>
             <div class="header__call">
@@ -38,21 +39,21 @@
       </div>
       <div class="header__wrapper">
         <div class="header__jumbotron"><img src="img/jumbotron-logo.png" class="header__jumbotron-logo">
-          <p class="header__jumbotron-text">Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit, sed do eiusmod tempor incidid</p>
-          <button class="header__jumbotron-button">Order now</button>
+          <p class="header__jumbotron-text">Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit, sed do eiusmod tempor incidid</p><a href="#form" class="header__jumbotron-button">Order now</a>
         </div>
       </div>
     </header>
-    <section class="about">
-      <div class="about__wrapper"><img src="img/about-photo1.jpg" class="about__photo1"><img src="img/about-photo2.jpg" class="about__photo2">
+    <section id="about" class="about">
+      <div class="about__wrapper">
+        <div class="about__photo-wrapper"><img src="img/about-photo.png" class="about__photo1"></div>
         <div class="about__content">
           <h1 class="about__heading">About us</h1>
-          <p class="about__text">Aliquam sed posuere urna, et gravida nisl. Praesent<br> interdum nisl libero, pretium 	egestas purus eleifend<br> vitae. Mauris suscipit vel lectus at luctus.</p>
+          <p class="about__text">Aliquam sed posuere urna, et gravida nisl. Praesent<br> interdum nisl libero, pretium 		egestas purus eleifend<br> vitae. Mauris suscipit vel lectus at luctus.</p>
           <button class="about__button">Read more</button>
         </div>
       </div>
     </section>
-    <section class="journal">
+    <section id="journal" class="journal">
       <div class="journal__wrapper">
         <h1 class="journal__heading">Our journal</h1>
         <div class="journal__tile-wrapper">
@@ -80,7 +81,7 @@
         </div>
       </div>
     </section>
-    <section class="form">
+    <section id="form" class="form">
       <div class="form__wrapper">
         <h1 class="form__heading">Do you wanna go?</h1>
         <p class="form__text">Aliquam sed posuere urna, et gravida nisl. Praesent<br>interdum nisl libero, pretium egestas purus eleifend vitae. Mauris suscipit vel lectus at luctus.</p>
@@ -92,7 +93,7 @@
         </form>
       </div>
     </section>
-    <section class="work">
+    <section id="work" class="work">
       <div class="work__wrapper">
         <div class="work__title">HOW WE WORK</div>
         <div class="work__tile">
@@ -137,11 +138,55 @@
         </div>
       </div>
     </section>
-    <section class="travel">
+    <section id="travel" class="travel">
       <div class="travel__wrapper">
         <div class="travel__heading">Travel with us</div>
         <div class="travel__tiles-wrapper">
-          <div class="travel__tile"></div>
+          <div class="travel__tile">
+            <div class="travel__stars"></div>
+            <div class="travel__title">Carpathian</div>
+            <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
+            <div class="travel__price">
+              <div class="travel__price-left">3150$</div>
+              <div class="travel__price-right">$793</div>
+            </div>
+          </div>
+          <div class="travel__tile--alps">
+            <div class="travel__stars--five"></div>
+            <div class="travel__title">Alps</div>
+            <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
+            <div class="travel__price">
+              <div class="travel__price-left">3150$</div>
+              <div class="travel__price-right">$1893</div>
+            </div>
+          </div>
+          <div class="travel__tile--pyrenees">
+            <div class="travel__stars--five"></div>
+            <div class="travel__title">Pyrenees</div>
+            <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
+            <div class="travel__price">
+              <div class="travel__price-left">3150$</div>
+              <div class="travel__price-right">$2593</div>
+            </div>
+          </div>
+          <div class="travel__tile--rocky">
+            <div class="travel__stars--five"></div>
+            <div class="travel__title">Rocky</div>
+            <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
+            <div class="travel__price">
+              <div class="travel__price-left">3150$</div>
+              <div class="travel__price-right">$2123</div>
+            </div>
+          </div>
+          <div class="travel__tile--kavkaz">
+            <div class="travel__stars--three"></div>
+            <div class="travel__title">Kavkaz</div>
+            <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
+            <div class="travel__price">
+              <div class="travel__price-left">3150$</div>
+              <div class="travel__price-right">$593</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -200,7 +245,7 @@
           <div class="clients__form-double"></div>
           <div class="clients__form-heading">CONTACTS</div>
           <div class="clients__form-text">Sign up for our newsletter to receive updates</div>
-          <form class="clients__form">
+          <form id="contacts" class="clients__form">
             <input placeholder="Name" type="text" required class="clients__naming">
             <input placeholder="Phone" type="tel" required class="clients__phone">
             <input placeholder="Email" type="email" required class="clients__mail">
@@ -219,6 +264,7 @@
         <div class="footer__phone">1 234 243 123</div>
       </div>
     </footer>
+    <div class="hidden"></div>
     <script src="lib/jquery/jquery-1.11.3.min.js"></script>
     <script src="lib/modernizr/modernizr.js"></script>
     <script src="js/common.js"></script>

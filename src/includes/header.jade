@@ -5,25 +5,28 @@ header.header
 				.header__logo
 					img.header__logo-img(src="img/logo.png")
 				nav.header__nav
-					ul
+					.header__burger
+						a.header__menu(href="#")
+							<svg height="32px" id="header__dropdown-menu" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+					ul.header__list
 						li
-							a(href="#") Our Story
+							a(href="#about") Our Story
 						li
-							a(href="#") Services
+							a(href="#travel") Services
 						li
-							a(href="#") Work
+							a(href="#work") Work
 						li
-							a(href="#") Journal
+							a(href="#journal") Journal
 						li
-							a(href="#") Contact
+							a(href="#contacts") Contact
 						li
-							a(href="#") Work
+							a(href="#work") Work
 						li
-							a(href="#") Journal
+							a(href="#journal") Journal
 				.header__call
 					button.header__call-us Call us
 	.header__wrapper
 		.header__jumbotron
 			img.header__jumbotron-logo(src="img/jumbotron-logo.png")
 			p.header__jumbotron-text Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit, sed do eiusmod tempor incidid
-			button.header__jumbotron-button Order now
+			a.header__jumbotron-button(href="#form") Order now

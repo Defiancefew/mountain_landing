@@ -1,4 +1,21 @@
 $(document).ready(function() {
+	
+// Smooth scroll
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
 
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
@@ -44,3 +61,23 @@ $(document).ready(function() {
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 });
+
+
+var link = document.querySelector(".header__menu");
+var popup = document.querySelector(".header__list");
+link.addEventListener("click", function(){
+popup.classList.toggle("hidden");
+});
+
+var mq = window.matchMedia('all and (max-width: 992px)');
+
+mq.addListener(function(changed) {
+    if(changed.matches) {
+        	popup.classList.add("hidden");
+    } else {
+        popup.classList.remove("hidden");
+    }
+});
+
+
+	
