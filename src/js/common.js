@@ -1,5 +1,11 @@
 $(document).ready(function() {
 	
+// Stellar
+$.stellar({
+  responsive: true,
+  verticalOffset: 350
+});
+
 // Smooth scroll
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -62,22 +68,24 @@ $(function() {
 
 });
 
+$(window).load(function() { 
+	$(".loaderInner").fadeOut(); 
+	$(".loader").delay(400).fadeOut("slow"); 
+});
+
 
 var link = document.querySelector(".header__menu");
 var popup = document.querySelector(".header__list");
+var form = document.querySelector(".form__wrapper")
 link.addEventListener("click", function(){
 popup.classList.toggle("hidden");
 });
 
-var mq = window.matchMedia('all and (max-width: 992px)');
+var mq = window.matchMedia("screen and (max-width: 992px)");
 
-mq.addListener(function(changed) {
-    if(changed.matches) {
-        	popup.classList.add("hidden");
-    } else {
-        popup.classList.remove("hidden");
-    }
-});
-
-
-	
+if (window.matchMedia("(min-width: 992px)").matches) {
+	popup.classList.remove("hidden");
+}
+else {
+	popup.classList.add("hidden");
+}

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="">
+    <meta name="description" content="Mountains travelling">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.png">
@@ -14,11 +14,14 @@
     <script src="lib/html5shiv/html5shiv.min.js"></script>
     <script src="lib/html5shiv/html5shiv-printshiv.min.js"></script>
     <script src="lib/respond/respond.min.js"></script><![endif]-->
+    <div class="loader">
+      <div class="loaderInner"></div>
+    </div>
     <header class="header">
       <div class="header__top-overlay">
         <div class="header__wrapper">
           <div class="header__topline">
-            <div class="header__logo"><img src="img/logo.png" class="header__logo-img"></div>
+            <div class="header__logo"><img src="img/logo.png" alt="logo" class="header__logo-img"></div>
             <nav class="header__nav">
               <div class="header__burger"><a href="#" class="header__menu"><svg height="32px" id="header__dropdown-menu" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></a></div>
               <ul class="header__list">
@@ -38,16 +41,16 @@
         </div>
       </div>
       <div class="header__wrapper">
-        <div class="header__jumbotron"><img src="img/jumbotron-logo.png" class="header__jumbotron-logo">
+        <div class="header__jumbotron"><img src="img/jumbotron-logo.png" alt="jumbotron-logo" class="header__jumbotron-logo">
           <p class="header__jumbotron-text">Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit, sed do eiusmod tempor incidid</p><a href="#form" class="header__jumbotron-button">Order now</a>
         </div>
       </div>
     </header>
     <section id="about" class="about">
       <div class="about__wrapper">
-        <div class="about__photo-wrapper"><img src="img/about-photo.png" class="about__photo1"></div>
+        <div class="about__photo-wrapper"><img src="img/about-photo.png" alt="about-photo" class="about__photo1"></div>
         <div class="about__content">
-          <h1 class="about__heading">About us</h1>
+          <h2 class="about__heading">About us</h2>
           <p class="about__text">Aliquam sed posuere urna, et gravida nisl. Praesent<br> interdum nisl libero, pretium 		egestas purus eleifend<br> vitae. Mauris suscipit vel lectus at luctus.</p>
           <button class="about__button">Read more</button>
         </div>
@@ -55,7 +58,7 @@
     </section>
     <section id="journal" class="journal">
       <div class="journal__wrapper">
-        <h1 class="journal__heading">Our journal</h1>
+        <h2 class="journal__heading">Our journal</h2>
         <div class="journal__tile-wrapper">
           <div class="journal__tile-img"><i class="journal__tile-icon"></i></div>
           <div class="journal__tile-info">
@@ -82,7 +85,7 @@
       </div>
     </section>
     <section id="form" class="form">
-      <div class="form__wrapper">
+      <div data-stellar-ratio="2" class="form__wrapper">
         <h1 class="form__heading">Do you wanna go?</h1>
         <p class="form__text">Aliquam sed posuere urna, et gravida nisl. Praesent<br>interdum nisl libero, pretium egestas purus eleifend vitae. Mauris suscipit vel lectus at luctus.</p>
         <form class="form__main">
@@ -95,12 +98,12 @@
     </section>
     <section id="work" class="work">
       <div class="work__wrapper">
-        <div class="work__title">HOW WE WORK</div>
+        <h2 class="work__title">HOW WE WORK</h2>
         <div class="work__tile">
           <div class="work__pin">1</div>
           <div class="work__badge-wrap">
             <div class="work__badge">
-              <div class="work__icon"></div>
+              <div class="work__icon--file"></div>
             </div>
           </div>
           <div class="work__heading">Lorem ipsum dolor sit </div>
@@ -110,7 +113,7 @@
           <div class="work__pin">2</div>
           <div class="work__badge-wrap">
             <div class="work__badge">
-              <div class="work__icon--2"></div>
+              <div class="work__icon--profile"></div>
             </div>
           </div>
           <div class="work__heading">Lorem ipsum dolor sit </div>
@@ -120,7 +123,7 @@
           <div class="work__pin">3</div>
           <div class="work__badge-wrap">
             <div class="work__badge">
-              <div class="work__icon--3"></div>
+              <div class="work__icon--book"></div>
             </div>
           </div>
           <div class="work__heading">Lorem ipsum dolor sit </div>
@@ -130,7 +133,7 @@
           <div class="work__pin">4</div>
           <div class="work__badge-wrap">
             <div class="work__badge">
-              <div class="work__icon--4"></div>
+              <div class="work__icon--checklist"></div>
             </div>
           </div>
           <div class="work__heading">Lorem ipsum dolor sit </div>
@@ -140,51 +143,61 @@
     </section>
     <section id="travel" class="travel">
       <div class="travel__wrapper">
-        <div class="travel__heading">Travel with us</div>
+        <h2 class="travel__heading">Travel with us</h2>
         <div class="travel__tiles-wrapper">
-          <div class="travel__tile">
-            <div class="travel__stars"></div>
-            <div class="travel__title">Carpathian</div>
-            <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
-            <div class="travel__price">
-              <div class="travel__price-left">3150$</div>
-              <div class="travel__price-right">$793</div>
+          <div class="travel__tile-addwrap">
+            <div class="travel__tile--carpathian">
+              <div class="travel__stars--four"></div>
+              <div class="travel__title">Carpathian</div>
+              <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
+              <div class="travel__price">
+                <div class="travel__price-left">3150$</div>
+                <div class="travel__price-right">$793</div>
+              </div>
             </div>
           </div>
-          <div class="travel__tile--alps">
-            <div class="travel__stars--five"></div>
-            <div class="travel__title">Alps</div>
-            <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
-            <div class="travel__price">
-              <div class="travel__price-left">3150$</div>
-              <div class="travel__price-right">$1893</div>
+          <div class="travel__tile-addwrap">
+            <div class="travel__tile--alps">
+              <div class="travel__stars--five"></div>
+              <div class="travel__title">Alps</div>
+              <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
+              <div class="travel__price">
+                <div class="travel__price-left">3150$</div>
+                <div class="travel__price-right">$1893</div>
+              </div>
             </div>
           </div>
-          <div class="travel__tile--pyrenees">
-            <div class="travel__stars--five"></div>
-            <div class="travel__title">Pyrenees</div>
-            <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
-            <div class="travel__price">
-              <div class="travel__price-left">3150$</div>
-              <div class="travel__price-right">$2593</div>
+          <div class="travel__tile-addwrap">
+            <div class="travel__tile--pyrenees">
+              <div class="travel__stars--five"></div>
+              <div class="travel__title">Pyrenees</div>
+              <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
+              <div class="travel__price">
+                <div class="travel__price-left">3150$</div>
+                <div class="travel__price-right">$2593</div>
+              </div>
             </div>
           </div>
-          <div class="travel__tile--rocky">
-            <div class="travel__stars--five"></div>
-            <div class="travel__title">Rocky</div>
-            <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
-            <div class="travel__price">
-              <div class="travel__price-left">3150$</div>
-              <div class="travel__price-right">$2123</div>
+          <div class="travel__tile-addwrap">
+            <div class="travel__tile--rocky">
+              <div class="travel__stars--five"></div>
+              <div class="travel__title">Rocky</div>
+              <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
+              <div class="travel__price">
+                <div class="travel__price-left">3150$</div>
+                <div class="travel__price-right">$2123</div>
+              </div>
             </div>
           </div>
-          <div class="travel__tile--kavkaz">
-            <div class="travel__stars--three"></div>
-            <div class="travel__title">Kavkaz</div>
-            <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
-            <div class="travel__price">
-              <div class="travel__price-left">3150$</div>
-              <div class="travel__price-right">$593</div>
+          <div class="travel__tile-addwrap">
+            <div class="travel__tile--kavkaz">
+              <div class="travel__stars--three"></div>
+              <div class="travel__title">Kavkaz</div>
+              <div class="travel__text">Lorem ipsum dolor si amet, consectetur adip</div>
+              <div class="travel__price">
+                <div class="travel__price-left">3150$</div>
+                <div class="travel__price-right">$593</div>
+              </div>
             </div>
           </div>
         </div>
@@ -192,15 +205,17 @@
     </section>
     <section class="gallery">
       <div class="gallery__wrapper">
-        <div class="gallery__title">Gallery</div>
+        <h2 class="gallery__title">Gallery</h2>
         <div class="gallery__photo-wrap">
-          <div class="gallery__block-1"><img src="/img/gallery-photo1.jpg" alt=""><img src="/img/gallery-photo4.jpg" alt=""></div>
-          <div class="gallery__block-2"><img src="/img/gallery-photo2.jpg" alt=""><img src="/img/gallery-photo5.jpg" alt=""></div>
+          <div class="gallery__grid">
+            <div class="gallery__block-1"><img src="/img/gallery-photo1.jpg" alt=""><img src="/img/gallery-photo4.jpg" alt=""></div>
+            <div class="gallery__block-2"><img src="/img/gallery-photo2.jpg" alt=""><img src="/img/gallery-photo5.jpg" alt=""></div>
+          </div>
           <div class="gallery__block-3"><img src="/img/gallery-photo3.jpg" alt=""><img src="/img/gallery-photo6.jpg" alt=""></div>
         </div>
       </div>
     </section>
-    <section class="partners">
+    <div class="partners">
       <div class="partners__wrapper">
         <div class="partners__item">
           <div class="partners__icon--slack"></div>
@@ -221,10 +236,10 @@
           <div class="partners__icon--nike"></div>
         </div>
       </div>
-    </section>
+    </div>
     <section class="clients">
       <div class="clients__wrapper">
-        <div class="clients__heading">Our clients say</div>
+        <h2 class="clients__heading">Our clients say</h2>
         <div class="clients__left"> 
           <div class="clients__icon"></div>
           <div class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </div>
@@ -258,8 +273,8 @@
       <div class="footer__wrapper">
         <div class="footer__copyright">All rights reserved 2015</div>
         <div class="footer__social"><a href="#" class="footer__icon-wrapper">
-            <div class="footer__icon"></div></a><a href="#" class="footer__icon-wrapper--facebook">
-            <div class="footer__icon--facebook"></div></a><a href="#" class="footer__icon-wrapper--vk">
+            <div class="footer__icon--twitter"></div></a><a href="#" class="footer__icon-wrapper--facebook">
+            <div class="footer__icon--social-facebook"></div></a><a href="#" class="footer__icon-wrapper--vk">
             <div class="footer__icon--vk"></div></a></div>
         <div class="footer__phone">1 234 243 123</div>
       </div>
@@ -267,6 +282,9 @@
     <div class="hidden"></div>
     <script src="lib/jquery/jquery-1.11.3.min.js"></script>
     <script src="lib/modernizr/modernizr.js"></script>
+    <script src="lib/stellar/jquery.stellar.min.js"></script>
+    <script src="lib/magnificpopup/jquery.magnific-popup.min.js"></script>
+    <script src="lib/masonry/masonry.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

@@ -1,11 +1,17 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-
+	.journal
+		&__tile-wrapper
+			display: block
+			margin: 80px auto
+			width: 760px
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.header
+		&__burger
+			display:block
 		ul.header__list
 			position: absolute
 			background-color: $blue
@@ -54,40 +60,13 @@
 			width: 35%
 		&__wrapper
 			margin-bottom: 100px
-	.gallery
-		&__block-1
-			float: none
-			margin: 0 auto
-			img
-				width: 60%
-				margin: 0 auto
-		&__block-2
-			float: none
-			margin: 0 auto
-			img
-				width: 60%
-				margin: 0 auto
-		&__block-3
-			float: none
-			width: 100%
-			margin: 0 auto
-			img
-				width: 60%
-				display: block
-				margin: 0 auto
-	.journal
-		&__tile-wrapper
-			display: block
-			margin: 80px auto
-			width: 760px
-	.partners
-		&__wrapper
-			padding-left: 18%
-		&__item
-			float: none
-			display: inline-block
-			padding: 41px 0 
-			margin-left: 9%
+	.travel
+		&__tile-addwrap
+			width: 30%
+			margin: 0 1%
+			&:nth-child(4)
+				margin-left: 18%
+			&:nth-child(5)
 	.clients
 		&__wrapper
 			min-height: 1500px
@@ -101,7 +80,7 @@
 			margin: 0 auto
 		&__form-wrapper
 			max-width: 440px
-			margin: 180px auto 0 auto
+			margin: 180px auto 80px auto
 	.header__menu
 		#header__dropdown-menu
 			display: inline-block
@@ -117,11 +96,35 @@
 		&__tile
 			display: block
 			margin: 0 auto
+			width: 50%
+	.travel
+		&__tile-addwrap
+			width: 40%
+			margin: 0	4%
+			&:nth-child(4)
+				margin: 0 4%
+			&:nth-child(5)
+				margin: 0 28%
+
+
+			
+
 
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	.header
+		&__call
+			display: none
+	.about
+		&__photo-wrapper
+			display: none
+	.work
+		&__tile
+			width: 100%
+	.travel
+		&__tiles-wrapper div
 
 
 

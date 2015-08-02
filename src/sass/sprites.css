@@ -1,0 +1,101 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.icon-Lock-locked {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -11px;
+  width: 14px;
+  height: 16px;
+}
+.icon-icon-adobe {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -211px;
+  width: 38px;
+  height: 34px;
+}
+.icon-icon-apostrofe {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -64px;
+  width: 24px;
+  height: 22px;
+}
+
+.icon-icon-facebook {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -27px;
+  width: 80px;
+  height: 18px;
+}
+
+
+.icon-icon-google {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -183px;
+  width: 80px;
+  height: 28px;
+}
+.icon-icon-heart {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -784px;
+  width: 81px;
+  height: 81px;
+}
+.icon-icon-nike {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -157px;
+  width: 70px;
+  height: 26px;
+}
+.icon-icon-people1 {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -515px;
+  width: 65px;
+  height: 65px;
+}
+.icon-icon-people2 {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -580px;
+  width: 65px;
+  height: 65px;
+
+.icon-icon-pseudo {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -865px;
+  width: 123px;
+  height: 134px;
+}
+.icon-icon-slack {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -133px;
+  width: 80px;
+  height: 24px;
+}
+
+.icon-icon-spotify {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -109px;
+  width: 80px;
+  height: 24px;
+}
+
+.icon-icon-tree {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -645px;
+  width: 65px;
+  height: 65px;
+}
+
+.icon-icon-water {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -710px;
+  width: 59px;
+  height: 74px;
+}

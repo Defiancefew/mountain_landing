@@ -127,7 +127,7 @@ grunt.initConfig({
 			all: {
 				src: 'src/img/sprites/*.png',
 				dest: 'src/img/spritesheet.png',
-				destCss: 'src/sass/sprites.sass',
+				destCss: 'src/sass/sprites.css',
 				algorithm: 'top-down'	
 			}
 		},

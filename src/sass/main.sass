@@ -3,6 +3,31 @@
 	margin: 0 auto
 	padding: 0 15px
 
+.loader 
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+
+.loaderInner 
+	background-image: url("../img/preloader.gif")
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	background-color: #fff
+	height: 60px
+	width: 60px
+	margin-top: -30px
+	margin-left: -30px
+	left: 50%
+	top: 50%
+	position: absolute
+
 #header__dropdown-menu
 	fill: $blue
 	margin-top: 25px
@@ -95,6 +120,7 @@
 		background-repeat: no-repeat
 		background-position: 144px 65px
 		position: relative
+		overflow: hidden
 		+cf
 	&__content
 		position: absolute
@@ -102,15 +128,15 @@
 	&__photo-wrapper
 		display: inline-block
 		float: right
-		width: 80%
+		width: 70%
 		position: relative
+
 	&__photo1
 		transition: 0.5s
 		position: absolute
 		top: -30px
-		right: -200px
+		right: -124px
 		z-index: 0
-		overflow-x: hidden
 		&:hover
 			filter: saturate(0.6) contrast(1.2) brightness(1) 
 	&__heading
@@ -137,6 +163,8 @@
 .journal
 	&__wrapper
 		@extend %wrapper
+		+m(800)
+			padding: 0
 	&__heading
 		color: black
 		font-family: "OpenSans-Bold"
@@ -226,11 +254,14 @@
 .form
 	min-height: 800px
 	background-image: url(../img/form-bg.jpg)
-	background-position: center
 	padding-top: 250px
-	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	position: relative
+	overflow: hidden
 	&__wrapper
 		@extend %wrapper
+		position: relative
 	&__heading
 		color: #2C2E37
 		font-family: "OpenSans-Bold"
@@ -304,8 +335,6 @@
 		display: flex
 		justify-content: center
 		align-items: center
-	&__icon
-		+s($icon-file)
 	&__heading
 		color: #2C2E37
 		font-family: "Roboto-Black"
@@ -314,15 +343,87 @@
 		color: #949494
 		font-family: "Roboto-Light"
 		font-size: 16px
-	&__icon--2
-		@extend .work__icon
-		+s($icon-profile)	
-	&__icon--3
-		@extend .work__icon
-		+s($icon-book)
-	&__icon--4
-		@extend .work__icon
-		+s($icon-checklist)
+	@each $s in file,profile,book,checklist
+		&__icon--#{$s}
+			@extend .icon-icon-#{$s}
+
+%tile__style
+	max-width: 200px
+	min-height: 382px
+	background-repeat: no-repeat
+	padding: 0 22px
+	color: #FFF
+	font-family: "OpenSans-Regular"
+	transition: 0.5s
+	margin-bottom: 35px	
+	margin: 0 auto
+	&:hover
+		filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg)
+
+.travel
+	background-image: url(../img/travel-bg.jpg)
+	background-repeat: no-repeat
+	min-height: 1060px
+	background-position: bottom center
+	&__wrapper
+		@extend %wrapper
+		+cf
+	&__tile-addwrap
+		width: 17.5%
+		margin: 0 1.1%
+		display: inline-block
+		+m(560)
+			width: 200px !important
+			display: block
+			margin: 20px auto !important
+	&__heading
+		text-align: center
+		color: #2C2E37
+		font-family: "OpenSans-Bold"
+		font-size: 30px
+		text-transform: uppercase
+		line-height: 30px
+		margin-bottom: 100px
+	&__tiles-wrapper
+		width: 100%
+		min-height: 382px
+		&:nth-child(6) div
+			margin-right: 0
+	&__tile
+		@each $s in carpathian,alps,pyrenees,rocky,kavkaz
+			&--#{$s}
+				@extend %tile__style
+				background-image: url(../img/tile-#{$s}.jpg)
+		&--kavkaz
+	&__stars
+		@each $s in four,five,three
+			&--#{$s}
+				@extend .icon-icon-#{$s}-stars
+				margin-bottom: 130px
+	&__title
+		font-size: 28px
+		color: #FFF
+		font-family: "OpenSans-Regular"
+		line-height: 28px
+	&__text
+		margin: 	30px 0 28px 0
+		font-size: 16px
+		color: #FFF
+		font-family: "OpenSans-Regular"
+	&__price-left
+		font-size: 18px
+		color: #FFF
+		font-family: "OpenSans-Regular"
+		text-decoration: line-through
+		float: left
+		height: 60px
+		line-height: 60px
+	&__price-right
+		font-family: "OpenSans-Bold"
+		font-size: 26px
+		float: right
+		height: 60px
+		line-height: 60px
 
 .gallery
 	&__wrapper
@@ -335,6 +436,7 @@
 		font-size: 30px
 		text-transform: uppercase
 		margin-bottom: 75px
+		margin-top: 75px
 	&__photo-wrap
 		+cf
 	&__block-1
@@ -356,42 +458,21 @@
 		@extend %wrapper
 		min-height: 180px
 		position: relative
-		+cf
+		display: flex
+		justify-content: space-around
+		align-items: center
+		flex-wrap: wrap
 	&__item
-		width: 16.66666%
-		float: left
-		padding: 120px 50px
-	&__icon
-		&--slack
-			+s($icon-slack)
+		display: flex
+			justify-content: center
+			align-items: center
+	@each $s in slack,adobe,google,facebook,spotify,nike
+		&__icon--#{$s}
+			@extend .icon-icon-#{$s}
 			transition: 0.5s
 			&:hover
 				filter: brightness(5%)
-		&--adobe
-			+s($icon-adobe)
-			transition: 0.5s
-			&:hover
-				filter: brightness(5%)
-		&--google
-			+s($icon-google)
-			transition: 0.5s
-			&:hover
-				filter: brightness(5%)
-		&--facebook
-			+s($icon-facebook)
-			transition: 0.5s
-			&:hover
-				filter: brightness(5%)
-		&--spotify
-			+s($icon-spotify)
-			transition: 0.5s
-			&:hover
-				filter: brightness(5%)
-		&--nike
-			+s($icon-nike)
-			transition: 0.5s
-			&:hover
-				filter: brightness(5%)
+
 
 .clients
 	min-height: 1280px
@@ -445,6 +526,8 @@
 		background-image: url(../img/form-bg.png)
 		border-radius: 8px
 		box-shadow: 0 5px 51px rgba(0, 0, 0, 0.75)
+		+m(600)
+			margin-bottom: 50px
 	&__form-heading
 		text-align: center
 		font-family: "OpenSans-Bold"
@@ -470,16 +553,21 @@
 
 .footer
 	background-image: url(../img/footer-bg.jpg)
+	background-repeat: no-repeat
+	background-size: cover
 	&__wrapper
 		@extend %wrapper
 		display: flex
 		justify-content: space-between
 		align-items: center
 		min-height: 80px
+		+m(600)
+			flex-direction: column
 	&__copyright
 		color: #6a95a3
 		font-family: "OpenSans-Regular"
 		font-size: 18px
+		margin-bottom: 5px
 	&__phone
 		color: #6a95a3
 		font-family: "Roboto-Black"
@@ -488,6 +576,7 @@
 		display: flex
 		width: 128px
 		justify-content: space-between
+		margin-bottom: 5px
 	&__icon-wrapper
 		width: 39px
 		height: 39px
@@ -502,92 +591,8 @@
 		&--vk
 			@extend .footer__icon-wrapper
 			background-color: #54769a
-	&__icon
-		+s($icon-twitter)
-		&--vk
-			+s($icon-vk)
-		&--facebook
-			+s($icon-social-facebook)
+	@each $s in twitter,social-facebook,vk
+		&__icon--#{$s}
+			@extend .icon-icon-#{$s}
 
-%tile__style
-	max-width: 200px
-	min-height: 382px
-	background-repeat: no-repeat
-	padding: 0 22px
-	color: #FFF
-	font-family: "OpenSans-Regular"
-	+cf
-	float: left
-	margin-right: 35px
-	transition: 0.5s
-	&:hover
-		filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg)
-
-.travel
-	background-image: url(../img/travel-bg.jpg)
-	min-height: 1030px
-	background-repeat: no-repeat
-	&__wrapper
-		@extend %wrapper
-	&__heading
-		text-align: center
-		color: #2C2E37
-		font-family: "OpenSans-Bold"
-		font-size: 30px
-		text-transform: uppercase
-		line-height: 30px
-		margin-bottom: 100px
-	&__tiles-wrapper
-		width: 100%
-		min-height: 382px
-		+cf
-	&__tile
-		@extend %tile__style
-		background-image: url(../img/tile-carpathian.jpg)
-		&--alps
-			@extend %tile__style
-			background-image: url(../img/tile-alps.jpg)
-		&--pyrenees
-			@extend %tile__style
-			background-image: url(../img/tile-pyrenees.jpg)
-		&--rocky
-			@extend %tile__style
-			background-image: url(../img/tile-rocky.jpg)
-		&--kavkaz
-			@extend %tile__style
-			background-image: url(../img/tile-kavkaz.jpg)
-			margin-right: 0
-	&__stars
-		+s($icon-four-stars)
-		margin-bottom: 130px
-		&--five
-			+s($icon-five-stars)
-			margin-bottom: 130px
-		&--three
-			+s($icon-three-stars)
-			margin-bottom: 130px
-	&__title
-		font-size: 28px
-		color: #FFF
-		font-family: "OpenSans-Regular"
-		line-height: 28px
-	&__text
-		margin: 	30px 0 28px 0
-		font-size: 16px
-		color: #FFF
-		font-family: "OpenSans-Regular"
-	&__price-left
-		font-size: 18px
-		color: #FFF
-		font-family: "OpenSans-Regular"
-		text-decoration: line-through
-		float: left
-		height: 60px
-		line-height: 60px
-	&__price-right
-		font-family: "OpenSans-Bold"
-		font-size: 26px
-		float: right
-		height: 60px
-		line-height: 60px
 
