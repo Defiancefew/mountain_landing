@@ -1,11 +1,79 @@
 $(document).ready(function() {
 	
-// Stellar
-$.stellar({
-  responsive: true,
-  verticalOffset: 350
-});
+//Animate
+(function($) {
+		$.fn.animated = function(inEffect, outEffect) {
+				$(this).css("opacity", "0").addClass("animated").waypoint(function(dir) {
+						if (dir === "down") {
+								$(this).removeClass(outEffect).addClass(inEffect).css("opacity", "1");
+						} else {
+								$(this).removeClass(inEffect).addClass(outEffect).css("opacity", "1");
+						};
+				}, {
+						offset: "70%"
+				}).waypoint(function(dir) {
+						if (dir === "down") {
+								$(this).removeClass(inEffect).addClass(outEffect).css("opacity", "1");
+						} else {
+								$(this).removeClass(outEffect).addClass(inEffect).css("opacity", "1");
+						};
+				}, {
+						offset: -$(window).height()
+				});
+		};
+})(jQuery);
 
+
+// $(".").animated("fadeIn","fadeOut");
+
+
+
+
+// Stellar
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
+jQuery(document).ready(function(){
+if( !isMobile.any()){
+    $.stellar({
+    	verticalOffset: 350
+    });
+
+    $(".header__jumbotron").animated("fadeInLeft", "fadeInRight");
+
+		$(".journal__tile-img").animated("fadeInLeft", null);
+		$(".journal__tile-img--1").animated("fadeInLeft", null);
+		$(".journal__tile-img--2").animated("fadeInLeft", null);
+		
+		
+		$(".gallery__block--1").animated("fadeInDown", "fadeInOut");
+		$(".gallery__block--2").animated("fadeInUp", "fadeInOut");
+		$(".gallery__block--3").animated("fadeInDown", "fadeInOut");
+		
+		$(".clients__left").animated("fadeInLeft", "fadeInOut");
+		$(".clients__right").animated("fadeInRight", "fadeInOut");
+		$(".clients__form-wrapper").animated("fadeIn", "fadeOut");
+    }
+
+});
 // Smooth scroll
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -21,7 +89,6 @@ $(function() {
     }
   });
 });
-
 
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
@@ -63,17 +130,17 @@ $(function() {
 	} catch(err) {
 
 	};
-
+// Отмена перетаскивания изображений
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 });
-
+// Preloader
 $(window).load(function() { 
 	$(".loaderInner").fadeOut(); 
 	$(".loader").delay(400).fadeOut("slow"); 
 });
 
-
+// Кнопка меню
 var link = document.querySelector(".header__menu");
 var popup = document.querySelector(".header__list");
 var form = document.querySelector(".form__wrapper")
@@ -81,11 +148,12 @@ link.addEventListener("click", function(){
 popup.classList.toggle("hidden");
 });
 
+var body = document.querySelector("header")
 var mq = window.matchMedia("screen and (max-width: 992px)");
-
 if (window.matchMedia("(min-width: 992px)").matches) {
 	popup.classList.remove("hidden");
 }
 else {
 	popup.classList.add("hidden");
 }
+

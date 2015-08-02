@@ -691,20 +691,6 @@ ul {
     font-family: "Roboto-Light";
     font-size: 16px; }
 
-.travel__tile--carpathian, .travel__tile--alps, .travel__tile--pyrenees, .travel__tile--rocky, .travel__tile--kavkaz {
-  max-width: 200px;
-  min-height: 382px;
-  background-repeat: no-repeat;
-  padding: 0 22px;
-  color: #FFF;
-  font-family: "OpenSans-Regular";
-  transition: 0.5s;
-  margin-bottom: 35px;
-  margin: 0 auto; }
-  .travel__tile--carpathian:hover, .travel__tile--alps:hover, .travel__tile--pyrenees:hover, .travel__tile--rocky:hover, .travel__tile--kavkaz:hover {
-    -webkit-filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg);
-            filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg); }
-
 .travel {
   background-image: url(../img/travel-bg.jpg);
   background-repeat: no-repeat;
@@ -740,15 +726,75 @@ ul {
     .travel__tiles-wrapper:nth-child(6) div {
       margin-right: 0; }
   .travel__tile--carpathian {
+    max-width: 200px;
+    min-height: 382px;
+    background-repeat: no-repeat;
+    padding: 0 22px;
+    color: #FFF;
+    font-family: "OpenSans-Regular";
+    transition: 0.5s;
+    margin-bottom: 35px;
+    margin: 0 auto;
     background-image: url(../img/tile-carpathian.jpg); }
+    .travel__tile--carpathian:hover {
+      -webkit-filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg);
+              filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg); }
   .travel__tile--alps {
+    max-width: 200px;
+    min-height: 382px;
+    background-repeat: no-repeat;
+    padding: 0 22px;
+    color: #FFF;
+    font-family: "OpenSans-Regular";
+    transition: 0.5s;
+    margin-bottom: 35px;
+    margin: 0 auto;
     background-image: url(../img/tile-alps.jpg); }
+    .travel__tile--alps:hover {
+      -webkit-filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg);
+              filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg); }
   .travel__tile--pyrenees {
+    max-width: 200px;
+    min-height: 382px;
+    background-repeat: no-repeat;
+    padding: 0 22px;
+    color: #FFF;
+    font-family: "OpenSans-Regular";
+    transition: 0.5s;
+    margin-bottom: 35px;
+    margin: 0 auto;
     background-image: url(../img/tile-pyrenees.jpg); }
+    .travel__tile--pyrenees:hover {
+      -webkit-filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg);
+              filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg); }
   .travel__tile--rocky {
+    max-width: 200px;
+    min-height: 382px;
+    background-repeat: no-repeat;
+    padding: 0 22px;
+    color: #FFF;
+    font-family: "OpenSans-Regular";
+    transition: 0.5s;
+    margin-bottom: 35px;
+    margin: 0 auto;
     background-image: url(../img/tile-rocky.jpg); }
+    .travel__tile--rocky:hover {
+      -webkit-filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg);
+              filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg); }
   .travel__tile--kavkaz {
+    max-width: 200px;
+    min-height: 382px;
+    background-repeat: no-repeat;
+    padding: 0 22px;
+    color: #FFF;
+    font-family: "OpenSans-Regular";
+    transition: 0.5s;
+    margin-bottom: 35px;
+    margin: 0 auto;
     background-image: url(../img/tile-kavkaz.jpg); }
+    .travel__tile--kavkaz:hover {
+      -webkit-filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg);
+              filter: sepia(0.1) saturate(2) contrast(1.5) brightness(0.9) hue-rotate(-15deg); }
   .travel__stars--four {
     margin-bottom: 130px; }
   .travel__stars--five {
@@ -782,7 +828,35 @@ ul {
 
 .gallery__wrapper {
   text-align: center;
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  *zoom: 1; }
+  .gallery__wrapper:before, .gallery__wrapper:after {
+    content: " ";
+    display: table; }
+  .gallery__wrapper:after {
+    clear: both; }
+.gallery__block--1 {
+  width: 23%; }
+.gallery__block--2 {
+  width: 31%; }
+.gallery__block--1 {
+  float: left;
+  margin-right: 2.56%; }
+  .gallery__block--1 img {
+    margin-bottom: 30px; }
+.gallery__block--2 {
+  float: left;
+  margin-right: 2.56%; }
+  .gallery__block--2 img {
+    margin-bottom: 30px; }
+.gallery__block--3 {
+  float: left;
+  margin-right: 2.56%; }
+  .gallery__block--3 img {
+    margin-bottom: 30px; }
+.gallery__block--3 {
+  width: 40%;
+  margin-right: 0; }
 .gallery__title, .clients__heading {
   color: #2C2E37;
   font-family: "OpenSans-Bold";
@@ -790,22 +864,7 @@ ul {
   text-transform: uppercase;
   margin-bottom: 75px;
   margin-top: 75px; }
-.gallery__photo-wrap {
-  *zoom: 1; }
-  .gallery__photo-wrap:before, .gallery__photo-wrap:after {
-    content: " ";
-    display: table; }
-  .gallery__photo-wrap:after {
-    clear: both; }
-.gallery__block-1 {
-  float: left; }
-.gallery__block-2 {
-  float: left; }
-.gallery__block-3 {
-  float: left; }
 .gallery img {
-  display: block;
-  padding: 9px;
   transition: 0.5s; }
   .gallery img:hover {
     -webkit-filter: sepia(0.4) saturate(1.5) contrast(0.9) brightness(1.1) hue-rotate(-15deg);
@@ -1115,7 +1174,24 @@ ul {
     .travel__tile-addwrap:nth-child(4) {
       margin: 0 4%; }
     .travel__tile-addwrap:nth-child(5) {
-      margin: 0 28%; } }
+      margin: 0 28%; }
+
+  .gallery__block--1 {
+    width: 40.21%;
+    margin-right: 4.58%; }
+  .gallery__block--2 {
+    width: 55.19%;
+    margin-right: 0; }
+  .gallery__block--3 {
+    width: 100%;
+    margin: 0 auto; }
+    .gallery__block--3 img {
+      width: 47%;
+      margin-right: 5%;
+      display: inline-block;
+      float: left; }
+      .gallery__block--3 img:nth-child(2) {
+        margin-right: 0; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .header__call {
@@ -1125,5 +1201,14 @@ ul {
     display: none; }
 
   .work__tile {
-    width: 100%; } }
+    width: 100%; }
+
+  .gallery__block--1, .gallery__block--2, .gallery__block--3 {
+    margin: 0;
+    display: block;
+    width: 100%;
+    float: none; }
+    .gallery__block--1 img, .gallery__block--2 img, .gallery__block--3 img {
+      width: 100%;
+      margin: 0; } }
 /* Custom, iPhone Retina */

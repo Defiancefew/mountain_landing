@@ -67,6 +67,10 @@
 			&:nth-child(4)
 				margin-left: 18%
 			&:nth-child(5)
+		&__tile
+			@each $s in carpathian,alps,pyrenees,rocky,kavkaz
+				&--#{$s}
+
 	.clients
 		&__wrapper
 			min-height: 1500px
@@ -105,12 +109,24 @@
 				margin: 0 4%
 			&:nth-child(5)
 				margin: 0 28%
-
-
-			
-
-
-
+	.gallery
+		&__block
+			&--1
+				width: 40.21%
+				margin-right: 4.58%
+			&--2
+				width: 55.19%
+				margin-right: 0
+			&--3
+				width: 100%
+				margin: 0 auto
+				img
+					width: 47%
+					margin-right: 5%
+					display: inline-block
+					float: left
+					&:nth-child(2)
+						margin-right: 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -123,9 +139,16 @@
 	.work
 		&__tile
 			width: 100%
-	.travel
-		&__tiles-wrapper div
-
+	.gallery
+		&__block
+			&--1,&--2,&--3
+				margin: 0
+				display: block
+				width: 100%
+				float: none
+				img
+					width: 100%
+					margin: 0
 
 
 /* Custom, iPhone Retina */
