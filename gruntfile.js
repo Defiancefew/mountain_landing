@@ -18,9 +18,9 @@ grunt.initConfig({
 		target: {
 			files: [{
 				expand: true,
-				cwd: 'build/css',
+				cwd: 'src/css',
 				src: ['*.css', '!*.min.css'],
-				dest: 'build/css',
+				dest: 'src/css',
 				ext: '.min.css'
 			}]
 		}
@@ -96,7 +96,8 @@ grunt.initConfig({
 				files: [
 				{expand:true, cwd:'src',  src:"index.html", dest:"build/" },
 				{expand:true, cwd:'src',  src:"fonts/**", dest:"build/" },
-				{expand:true, cwd:'src', src:"lib/**", dest:"build/" }
+				{expand:true, cwd:'src', src:"lib/**", dest:"build/" },
+				{expand:true, cwd:'src', src:"css/*", dest:"build/" }
 				]
 			}
 		},

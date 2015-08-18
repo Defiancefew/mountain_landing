@@ -8,7 +8,7 @@ $(document).ready(function() {
 								$(this).removeClass(outEffect).addClass(inEffect).css("opacity", "1");
 						} else {
 								$(this).removeClass(inEffect).addClass(outEffect).css("opacity", "1");
-						};
+						}
 				}, {
 						offset: "70%"
 				}).waypoint(function(dir) {
@@ -16,7 +16,7 @@ $(document).ready(function() {
 								$(this).removeClass(inEffect).addClass(outEffect).css("opacity", "1");
 						} else {
 								$(this).removeClass(outEffect).addClass(inEffect).css("opacity", "1");
-						};
+						}
 				}, {
 						offset: -$(window).height()
 				});
@@ -54,7 +54,8 @@ var isMobile = {
 jQuery(document).ready(function(){
 if( !isMobile.any()){
     $.stellar({
-    	verticalOffset: 350
+    	verticalOffset: 250,
+    	hideDistantElements: false
     });
 
     $(".header__jumbotron").animated("fadeInLeft", "fadeInRight");
@@ -102,7 +103,7 @@ $(function() {
 		$("img[src*='svg']").attr("src", function() {
 			return $(this).attr("src").replace(".svg", ".png");
 		});
-	};
+	}
 
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
@@ -129,7 +130,7 @@ $(function() {
 		}
 	} catch(err) {
 
-	};
+	}
 // Отмена перетаскивания изображений
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
@@ -143,12 +144,12 @@ $(window).load(function() {
 // Кнопка меню
 var link = document.querySelector(".header__menu");
 var popup = document.querySelector(".header__list");
-var form = document.querySelector(".form__wrapper")
+var form = document.querySelector(".form__wrapper");
 link.addEventListener("click", function(){
 popup.classList.toggle("hidden");
 });
 
-var body = document.querySelector("header")
+var body = document.querySelector("header");
 var mq = window.matchMedia("screen and (max-width: 992px)");
 if (window.matchMedia("(min-width: 992px)").matches) {
 	popup.classList.remove("hidden");

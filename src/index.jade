@@ -2,20 +2,24 @@ doctype html
 html(lang="en")
 	head
 		meta(charset="UTF-8")
-		meta(name="description" content="Mountains travelling")
+		meta(name="description" content="")
+
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
-		link(rel="shortcut icon" href="favicon.png")
-		link(rel="stylesheet" href="lib/animate/animate.css")
-		link(rel="stylesheet" href="css/style.css")
-		title Travel with us to mountains!
-	body
+		link(rel="shortcut icon" href="img/favicon.png")
+		link(rel="apple-touch-icon" href="img/apple-touch-icon.png")
+		//- HTML 5 SHIV
 		<!--[if lt IE 9]>
 		script(src="lib/html5shiv/es5-shim.min.js")
 		script(src="lib/html5shiv/html5shiv.min.js")
 		script(src="lib/html5shiv/html5shiv-printshiv.min.js")
 		script(src="lib/respond/respond.min.js")
 		<![endif]-->
+		title Travel with us to the mountains!
+		link(rel="stylesheet" href="css/style.css")
+		link(rel="stylesheet" href="lib/animate/animate.css")
+	body
+
 		.loader
 			.loaderInner
 		include includes/header.jade
@@ -29,9 +33,13 @@ html(lang="en")
 		include includes/clients.jade
 		include includes/footer.jade
 		.hidden
-		script(src="lib/jquery/jquery-1.11.3.min.js")
+
 		script(src="lib/modernizr/modernizr.js")
-		script(src="lib/stellar/jquery.stellar.min.js")
+			
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+		script.
+			window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>');
+
 		script(src="lib/waypoints/waypoints.min.js")
-		script(src="lib/magnificpopup/jquery.magnific-popup.min.js")
+		script(src="lib/stellar/jquery.stellar.min.js")
 		script(src="js/common.js")

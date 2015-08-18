@@ -14,14 +14,19 @@
 			display:block
 		ul.header__list
 			position: absolute
-			background-color: $blue
+			background-color: rgba(54,174,234,0.4)
 			border-radius: 5px
+			top: 100%
+			left: 0
+			right: 0
 			li
 				display: block
 				margin-right: 0
 				transform: none
 				padding: 0 40px
-				top: 0
+				top: 80%
+				right: 0
+				left: 0
 				&:hover
 					background-color: lighten($blue, 10%)
 				a
@@ -38,9 +43,6 @@
 		&__jumbotron-logo
 			display: block
 			margin: 0 auto
-	.about
-		&__photo1
-		&__photo2
 	.form
 		text-align: center
 		input
@@ -66,22 +68,20 @@
 			margin: 0 1%
 			&:nth-child(4)
 				margin-left: 18%
-			&:nth-child(5)
-		&__tile
-			@each $s in carpathian,alps,pyrenees,rocky,kavkaz
-				&--#{$s}
 
 	.clients
 		&__wrapper
 			min-height: 1500px
 		&__right
+			max-width: 100%
 			float: none
 			display: block
-			margin: 0 auto
+			margin: 20px auto
 		&__left
+			max-width: 100%
 			float: none
 			display: block
-			margin: 0 auto
+			margin: 20px auto
 		&__form-wrapper
 			max-width: 440px
 			margin: 180px auto 80px auto

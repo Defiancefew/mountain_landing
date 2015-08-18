@@ -2,19 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Mountains travelling">
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.png">
-    <link rel="stylesheet" href="lib/animate/animate.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Travel with us to mountains!</title>
-  </head>
-  <body><!--[if lt IE 9]>
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png"><!--[if lt IE 9]>
     <script src="lib/html5shiv/es5-shim.min.js"></script>
     <script src="lib/html5shiv/html5shiv.min.js"></script>
     <script src="lib/html5shiv/html5shiv-printshiv.min.js"></script>
     <script src="lib/respond/respond.min.js"></script><![endif]-->
+    <title>Travel with us to the mountains!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/animate/animate.css">
+  </head>
+  <body>
     <div class="loader">
       <div class="loaderInner"></div>
     </div>
@@ -22,7 +23,7 @@
       <div class="header__top-overlay">
         <div class="header__wrapper">
           <div class="header__topline">
-            <div class="header__logo"><img src="img/logo.png" alt="logo" class="header__logo-img"></div>
+            <div class="header__logo"><a href="#"><img src="img/logo.png" alt="logo" class="header__logo-img"></a></div>
             <nav class="header__nav">
               <div class="header__burger"><a href="#" class="header__menu"><svg height="32px" id="header__dropdown-menu" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></a></div>
               <ul class="header__list">
@@ -72,7 +73,7 @@
           <div class="journal__tile-info">
             <div class="journal__tile-sub">tree</div>
             <div class="journal__tile-heading">Lorem ipsum dolor sit<br> amet, consectetur<br> adipisicing elit,</div>
-            <div class="journal__tile-text">The way to a successful brand is hard,<br> but always very interesting. Share the full<br> story of your project – from the very first<br> day until now.</div>
+            <div class="journal__tile-text">The way to a successful brand is hard,<br> but always very interesting. Share the full story of your project – from the very first day until now.</div>
             <div class="journal__tile-pagination">02</div>
           </div>
           <div class="journal__tile-img--2"><i class="journal__tile-icon--2"></i></div>
@@ -86,7 +87,7 @@
       </div>
     </section>
     <section id="form" class="form">
-      <div data-stellar-ratio="2" class="form__wrapper">
+      <div data-stellar-ratio="2" data-stellar-offset-parent="true" class="form__wrapper">
         <h1 class="form__heading">Do you wanna go?</h1>
         <p class="form__text">Aliquam sed posuere urna, et gravida nisl. Praesent<br>interdum nisl libero, pretium egestas purus eleifend vitae. Mauris suscipit vel lectus at luctus.</p>
         <form class="form__main">
@@ -207,9 +208,9 @@
     <section class="gallery">
       <div class="gallery__wrapper">
         <h2 class="gallery__title">Gallery</h2>
-        <div class="gallery__block--1"><img src="/img/gallery-photo1.jpg" alt="gallery-photo"><img src="/img/gallery-photo4.jpg" alt="gallery-photo"></div>
-        <div class="gallery__block--2"><img src="/img/gallery-photo2.jpg" alt="gallery-photo"><img src="/img/gallery-photo5.jpg" alt="gallery-photo"></div>
-        <div class="gallery__block--3"><img src="/img/gallery-photo3.jpg" alt="gallery-photo"><img src="/img/gallery-photo6.jpg" alt="gallery-photo"></div>
+        <div class="gallery__block--1"><img src="img/gallery-photo1.jpg" alt="gallery-photo"><img src="img/gallery-photo4.jpg" alt="gallery-photo"></div>
+        <div class="gallery__block--2"><img src="img/gallery-photo2.jpg" alt="gallery-photo"><img src="img/gallery-photo5.jpg" alt="gallery-photo"></div>
+        <div class="gallery__block--3"><img src="img/gallery-photo3.jpg" alt="gallery-photo"><img src="img/gallery-photo6.jpg" alt="gallery-photo"></div>
       </div>
     </section>
     <div class="partners">
@@ -240,18 +241,12 @@
         <div class="clients__left"> 
           <div class="clients__icon"></div>
           <div class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </div>
-          <div class="clients__tile-wrapper">
-            <div class="clients__photo"></div>
-            <div class="clients__name">Pavliv Yaroslav Web designer</div>
-          </div>
+          <div class="clients__tile-wrapper"><i class="clients__photo"></i><span class="clients__name">Pavliv Yaroslav Web designer</span></div>
         </div>
         <div class="clients__right">
           <div class="clients__icon"></div>
           <div class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </div>
-          <div class="clients__tile-wrapper">
-            <div class="clients__photo--1"></div>
-            <div class="clients__name">John Scott The Fringe</div>
-          </div>
+          <div class="clients__tile-wrapper"><i class="clients__photo--1"></i><span class="clients__name">John Scott The Fringe</span></div>
         </div>
         <div class="clients__form-wrapper">
           <div class="clients__form-double"></div>
@@ -277,11 +272,14 @@
       </div>
     </footer>
     <div class="hidden"></div>
-    <script src="lib/jquery/jquery-1.11.3.min.js"></script>
     <script src="lib/modernizr/modernizr.js"></script>
-    <script src="lib/stellar/jquery.stellar.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>');
+      
+    </script>
     <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/magnificpopup/jquery.magnific-popup.min.js"></script>
+    <script src="lib/stellar/jquery.stellar.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
