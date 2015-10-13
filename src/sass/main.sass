@@ -1,7 +1,28 @@
+body
+	overflow-x: hidden
+
+/* Wrapper */
+
 %wrapper
 	max-width: 1170px
 	margin: 0 auto
 	padding: 0 15px
+
+// .header__head-overlay
+// 	position: absolute
+// 	width: 100%
+// 	height: 100%
+// 	z-index: 3
+// 	visibility: none
+// 	pointer-events: visible
+
+// .header__burger
+// 	z-index: 99999
+
+.active
+	display: block !important
+
+/* Simple preloader */
 
 .loader 
 	background: none repeat scroll 0 0 #ffffff
@@ -13,7 +34,6 @@
 	top: 0
 	width: 100%
 	z-index: 9999
-
 .loaderInner 
 	background-image: url("../img/preloader.gif")
 	background-repeat: no-repeat
@@ -28,10 +48,15 @@
 	top: 50%
 	position: absolute
 
+/* Dropdown */
+
 #header__dropdown-menu
 	fill: $blue
 	margin-top: 25px
 	display: none
+
+/* Header */
+
 .header
 	background-image: url(../img/header-bg.jpg)
 	background-position: top center
@@ -54,6 +79,7 @@
 			margin-left: 20px
 	&__nav
 		float: left
+		z-index: 9999
 	li
 		display: inline-block
 		margin-right: 25px
@@ -86,7 +112,7 @@
 		font-size: 12px
 		line-height: 12px
 		text-transform: uppercase
-	&__jumbotron
+	&__jumbotron 																		// MAIN SCREEN BEGINS
 		position: absolute
 		top: 300px
 		padding-left: 60px
@@ -121,6 +147,9 @@
 			margin: 0 auto
 			position: relative
 			left: -10px
+
+/* ABOUT SECTION */
+
 .about
 	background-color: #f6f4f4
 	position: relative
@@ -142,7 +171,6 @@
 		float: right
 		width: 70%
 		position: relative
-
 	&__photo1
 		transition: 0.5s
 		position: absolute
@@ -172,6 +200,8 @@
 		font-size: 12px
 		text-transform: uppercase
 
+/* JOURNAL SECTION */
+
 .journal
 	&__wrapper
 		@extend %wrapper
@@ -195,19 +225,15 @@
 		+m(400)
 			width: 310px !important
 			height: auto
-
 	&__tile-img
 		background-image: url(../img/tile-mountain.jpg)
 		background-size: cover
 		width: 380px
 		height: 380px
 		float: left
-		display: flex
-		justify-content: center
-		align-items: center
 		position: relative
 		transition: 0.5s
-		+m(380)
+		+m(400)
 			width: 310px
 			height: 310px
 		&:hover
@@ -221,15 +247,17 @@
 	&__tile-icon
 		display: inline-block
 		+s($icon-heart)
+		+ca
 	&__tile-info
 		width: 380px
 		height: 380px
 		float: left
 		text-align: center
 		padding: 50px 28px 0 28px
-		+m(380)
+		+m(400)
 			width: 310px
 			height: 310px
+			padding: 50px 24px 0 24px
 	&__tile-sub 
 		color: $blue
 		font-family: "OpenSans-Bold", sans-serif
@@ -258,6 +286,7 @@
 	&__tile-icon--1
 		display: inline-block
 		+s($icon-water)
+		+ca
 	&__tile-img--1
 		@extend .journal__tile-img
 		background-image: url(../img/tile-lake.jpg)
@@ -270,6 +299,7 @@
 	&__tile-icon--2
 		display: inline-block
 		+s($icon-tree)
+		+ca
 	&__tile-img--2
 		@extend .journal__tile-img
 		background-image: url(../img/tile-forest.jpg)
@@ -279,7 +309,9 @@
 			position: absolute
 			top: 50px
 			left: 0
-	
+
+/* FORM SECTION */
+
 .form
 	min-height: 800px
 	background-image: url(../img/form-bg.jpg)
@@ -320,6 +352,8 @@
 		padding-left: 10px
 		margin-bottom: 10px
 		font-size: 14px
+
+/* WORK SECTION */
 
 .work
 	min-height: 720px
@@ -375,6 +409,8 @@
 	@each $s in file,profile,book,checklist
 		&__icon--#{$s}
 			@extend .icon-icon-#{$s}
+
+/* TRAVEL SECTION */
 
 .travel
 	background-image: url(../img/travel-bg.jpg)
@@ -450,6 +486,8 @@
 		height: 60px
 		line-height: 60px
 
+/* GALLERY SECTION */
+
 .gallery
 	&__wrapper
 		@extend %wrapper
@@ -470,8 +508,6 @@
 		&--3
 			width: 40%
 			margin-right: 0
-
-
 	&__title
 		color: #2C2E37
 		font-family: "OpenSans-Bold", sans-serif
@@ -483,6 +519,8 @@
 		transition: 0.5s
 		&:hover
 			filter: sepia(0.4) saturate(1.5) contrast(0.9) brightness(1.1) hue-rotate(-15deg)
+
+/* PARTNERS SECTION */
 
 .partners
 	background-color: #f8f9fa
@@ -511,6 +549,7 @@
 			&:hover
 				filter: brightness(5%)
 
+/* CLIENTS SECTION */
 
 .clients
 	min-height: 1280px
@@ -540,9 +579,6 @@
 		max-width: 48%
 		position: relative
 		float: right
-	&__tile-wrapper
-		// display: flex
-		// align-items: center
 	&__photo
 		+s($icon-people1)
 		margin-right: 20px
@@ -605,6 +641,8 @@
 		+m(400)
 			left: 0
 
+/* FOOTER SECTION */
+
 .footer
 	background-image: url(../img/footer-bg.jpg)
 	background-repeat: no-repeat
@@ -648,5 +686,3 @@
 	@each $s in twitter,social-facebook,vk
 		&__icon--#{$s}
 			@extend .icon-icon-#{$s}
-
-
